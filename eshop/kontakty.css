@@ -1,0 +1,163 @@
+.navlinks {
+    margin-top: 5px;
+    margin-left: 15px;
+}
+
+.navbar {
+    padding: 10px;
+    display: flex;
+}
+
+.caroptions {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+h4 {
+    text-align: center;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+
+    margin-left: 15px;
+}
+
+.navbar a:hover {
+    color: red;
+}
+
+.cards {
+    justify-content: space-evenly;
+    display: flex;
+    text-align: center;
+    margin-top: 20px;
+    
+}
+
+.hello {
+    justify-content: center;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin-bottom: 1rem;
+}
+
+.contact-info {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-info li {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info li i {
+    margin-right: 10px;
+    color: #4CAF50;
+}
+
+.contact-info a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.footers {
+    background-color: #333;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+  }
+  
+  .footertext {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .footer-row {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    flex-wrap: wrap;
+  }
+  
+  .footer-section {
+    text-align: left;
+    max-width: 200px;
+  }
+  
+  .footer-section h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: #f1c40f; 
+  }
+  
+  .footer-section p {
+    margin: 5px 0;
+    font-size: 14px;
+    text-align: center;
+    color: #ddd;
+  }
+  
+  .social-icons {
+    margin-top: 20px;
+  }
+  
+  .social-icons a {
+    color: white;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    color: #f1c40f;
+  }
+  
+  .cart-icon {
+    font-size: 24px;
+    color: #333;
+    margin-left: 15px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .cart-icon:hover {
+    color: #007bff;
+  }

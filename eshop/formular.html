@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulář objednávky</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="icon" type="image/x-icon" href="https://image.spreadshirtmedia.com/image-server/v1/compositions/T812A339PA4267PT17X218Y28D1005451520W11447H11460/views/1,width=500,height=500,appearanceId=339,backgroundColor=ffffff,noPt=true/sqare-black-mens-premium-t-shirt.jpg">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="img/logo.png" width="50" height="auto"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Domov</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="kontakty.html">Kontakty</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="o nas.html">O Nas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+                <a href="kosik.html" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Hledat</button>
+                </form>
+            </div>
+            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Přihlásit
+            </button>
+        </div>
+    </nav>
+
+
+    <div class="container order-form">
+        <h2>Vyplňte údaje pro objednávku</h2>
+
+        <h3>Vaše objednávka:</h3>
+        <ul id="order-summary"></ul>
+
+        <form id="order-form">
+            <label for="name">Jméno a příjmení:</label>
+            <input type="text" id="name" placeholder="Zadejte jméno" required>
+
+            <label for="address">Adresa:</label>
+            <input type="text" id="address" placeholder="Ulice a číslo" required>
+
+            <label for="city">Město:</label>
+            <input type="text" id="city" placeholder="Zadejte město" required>
+
+            <label for="zip">PSČ:</label>
+            <input type="text" id="zip" placeholder="123 45" pattern="[0-9]{3} [0-9]{2}" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" placeholder="example@email.com" required>
+
+            <label for="phone">Telefon:</label>
+            <div class="phone-group">
+                <select id="country-code">
+                    <option value="+420" selected>+420 (CZ)</option>
+                </select>
+                <input type="text" id="phone" placeholder="123456789" pattern="[0-9]{9}" required>
+            </div>
+
+            <p id="error-message" class="error hidden">Vyplňte všechna pole!</p>
+
+            <button type="submit">Odeslat objednávku</button>
+        </form>
+
+        <p id="confirmation-message" class="hidden">🎉 Objednávka byla úspěšně odeslána!</p>
+    </div>
+
+
+    <div class="footers">
+        <footer>
+            <p>Author: Hege Refsnes</p>
+            <p><a href="mailto:hege@example.com">hege@example.com</a></p>
+
+            <div class="footertext">
+                <div class="footer-row">
+                    <div class="footer-section">
+                        <h4>Dotazy</h4>
+                        <p>Kontakt</p>
+                        <p>Mezinárodní maloobchodníci</p>
+                        <p>Kariéra</p>
+                    </div>
+
+                    <div class="footer-section">
+                        <h4>Shop</h4>
+                        <p>Stav objednávky</p>
+                        <p>Doprava</p>
+                        <p>Platby</p>
+                        <p>Podmínky služby</p>
+                        <p>Otisk</p>
+                    </div>
+
+                    <div class="footer-section">
+                        <h4>Regiony</h4>
+                        <p>EU Shop (v EUR)</p>
+                        <p>Obchod v USA (v $)</p>
+                        <p>Showroom (Česko)</p>
+                    </div>
+
+                    <div class="footer-section">
+                        <h4>Feedback</h4>
+                        <p>Hlásit pravopisné chyby</p>
+                    </div>
+
+                    <div class="footer-section">
+                        <h4>Proč my</h4>
+                        <p>Všechny produkty prodávané na novritsch.com jsou námi testovány a schváleny s bezpočtem hodin používání v terénu...</p>
+                    </div>
+                </div>
+            </div>
+
+        
+            <div class="social-icons">
+                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://discord.com" target="_blank"><i class="fab fa-discord"></i></a>
+                <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.reddit.com" target="_blank"><i class="fab fa-reddit"></i></a>
+            </div>
+        </footer>
+    </div>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            loadOrderSummary();
+        });
+
+        function loadOrderSummary() {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            let orderSummary = document.getElementById("order-summary");
+
+            if (cart.length === 0) {
+                orderSummary.innerHTML = "<p>Košík je prázdný.</p>";
+                return;
+            }
+
+            orderSummary.innerHTML = "";
+            cart.forEach(item => {
+                let li = document.createElement("li");
+                li.textContent = `${item.name} - ${item.price} Kč x ${item.quantity}`;
+                orderSummary.appendChild(li);
+            });
+        }
+
+        document.getElementById("order-form").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            let name = document.getElementById("name").value.trim();
+            let address = document.getElementById("address").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let phone = document.getElementById("phone").value.trim();
+
+            if (!name || !address || !email || !phone) {
+                document.getElementById("error-message").classList.remove("hidden");
+                return;
+            }
+
+            localStorage.removeItem("cart");
+            document.getElementById("confirmation-message").classList.remove("hidden");
+
+            setTimeout(() => {
+                window.location.href = "index.html";
+            }, 3000);
+        });
+    </script>
+
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #0c2c16;
+            color: #000000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .order-form {
+            background: rgb(47, 116, 58);
+            max-width: 500px;
+            width: 90%;
+            margin: 100px auto 20px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            margin: 10px 0 5px;
+            display: block;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        .error {
+            color: red;
+            display: none;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .confirmation-message {
+            color: green;
+            font-size: 18px;
+        }
+
+        .footer-section {
+            margin-bottom: 20px;
+        }
+
+        .social-icons a {
+            margin-right: 10px;
+            color: #000;
+            font-size: 24px;
+            text-decoration: none;
+        }
+
+        .footertext {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .footer-row {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    flex-wrap: wrap;
+  }
+  
+  .footer-section {
+    text-align: left;
+    max-width: 200px;
+  }
+  
+  .footer-section h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: #f1c40f; /* Zlatá pro zvýraznění nadpisů */
+  }
+  
+  .footer-section p {
+    margin: 5px 0;
+    font-size: 14px;
+    text-align: center;
+    color: #ddd; /* Světlejší text pro čitelnost */
+  }
+  
+  .social-icons {
+    margin-top: 20px;
+  }
+  
+  .social-icons a {
+    color: white; /* Ikonky budou bílé */
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    color: #f1c40f; /* Při najetí zlatá barva */
+  }
+  
+  .cart-icon {
+    font-size: 24px;
+    color: #333;
+    margin-left: 15px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .cart-icon:hover {
+    color: #007bff; /* Modrá při najetí myší */
+  }
+    </style>
+</body>
+</html>
